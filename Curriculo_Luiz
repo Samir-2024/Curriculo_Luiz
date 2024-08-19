@@ -1,104 +1,314 @@
-/* Define a classe Carro */
-public final class Carro {
-    private String modelo;
-    private int ano;
-    private double precoDiaria;
-    private boolean disponivel;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="curriculo.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="perfil.jpg" alt="Seu Nome">
+                <h1>Samir Kaled Ali Chehade</h1>
+                <p class="title">Desenvolvedor Web</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#objetivo"><i class="fas fa-user-circle"></i> Objetivo</a></li>
+                    <li><a href="#habilidades"><i class="fas fa-code"></i> Habilidades</a></li>
+                    <li><a href="#experiência"><i class="fas fa-briefcase"></i> Experiência</a></li>
+                    <li><a href="#educacao"><i class="fas fa-graduation-cap"></i> Educação</a></li>
+                    <li><a href="#certificações"><i class="fas fa-certificate"></i> Certificações</a></li>
+                    <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section id="objetivo">
+                <h2>Objetivo</h2>
 
+                <p>Buscando uma posição como Desenvolvedor Web, onde possa aplicar minhas habilidades em desenvolvimento front-end e back-end para criar soluções eficazes e inovadoras. Com uma sólida experiência em tecnologias como HTML, CSS, JavaScript, e frameworks modernos como React e Angular no front-end, além de proficiência em linguagens de back-end como Node.js e PHP, estou preparado para contribuir de forma significativa em projetos que demandem alta performance e excelente experiência do usuário. Tenho também conhecimento em bancos de dados relacionais e não-relacionais, como MySQL e MongoDB, e estou sempre em busca de aprender novas ferramentas e práticas para otimizar meu trabalho.</p>
+            </section>
+            <section id="habilidades">
+                <h2>Habilidades</h2>
+                <div class="skill">
+                    <h3>HTML/CSS</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>            
+                <div class="skill">
+                    <h3>Python</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="experiencia">
+                <h2>Experiência Profissional</h2>
+               
+                <div class="experience">
+                    <h3>Estagiário de TI | Empresa TCS Tata Consultancy Services</h3>
+                    <p class="date">Outubro 2022 - Janeiro 2023</p>
+                    <ul>
+                        <li>Terceirização de processos de negócios</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="educacao">
+                <h2>Educação</h2>
+                <div class="education">
+                    <h3>Bacharelado em Engenharia de Software | Centro Universitário Filadélfia - UniFil </h3>
+                    <p class="date">2018 - 2022</p>
+                </div>
+            </section>
+            <section id="certificacoes">
+                <h2>Certificações</h2>
+                <ul class="certification-list">
+                    <li>Python Avançado | Plataforma Udemy</li>
+                    <li>Banco de Dados SQL | Plataforma Udemy</li>
+                    <li>Power BI | Plataforma Udemy</li>
+                    <li>HTML e CSS| Plataforma Udemy</li>
+                    <li>JavaScript | Plataforma Udemy</li>
+                </ul>
+            </section>
+            <section id="contato">
+                <h2>Contato</h2>
+                <p>samir.chehade42@gmail.com</p>
+                <p>(43) 98419-2435</p>
+                <p><i class="fab fa-linkedin"></i><a href="www.linkedin.com/in/samir-chehade" target="_blank">https://www.linkedin.com/in/samir-chehade/</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/seuusuario" target="_blank">github.com/seuusuario</a></p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
 
-    // Construtor inicializando todos os atributos
-    public Carro(String modelo, int ano, double precoDiaria, boolean disponivel) {
-        this.modelo = modelo;
-        this.ano = ano;
-        if (precoDiaria < 0) {
-            this.precoDiaria = 0.0;
-        } else {
-            this.precoDiaria = precoDiaria;
-        }
-        this.disponivel = disponivel;
+/* Configurações básicas de fonte e cores */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.sidebar p.title {
+    font-size: 16px;
+    color: #d1e7ff;
+    margin-bottom: 40px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar nav ul li a:hover {
+    color: #d1e7ff;
+}
+
+main {
+    padding: 40px;
+    width: calc(100% - 280px);
+}
+
+main h2 {
+    font-size: 24px;
+    color: #007BFF;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+main h2::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #007BFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+main p, main ul {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+main .experience, main .education {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+main .experience h3, main .education h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+main .experience p.date, main .education p.date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.progress-bar {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.progress-bar .progress {
+    height: 100%;
+    background-color: #007BFF;
+    transition: width 0.4s ease;
+}
+
+#contato p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#contato i {
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+#contato a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+/* Adicionando responsividade */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
     }
 
-
-    // Getters
-    public String getModelo() {
-        return modelo;
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+        text-align: left;
     }
 
-
-    public int getAno() {
-        return ano;
+    .sidebar nav ul {
+        display: flex;
+        justify-content: space-between;
     }
 
-
-    public double getPrecoDiaria() {
-        return precoDiaria;
+    main {
+        width: 100%;
+        padding: 20px;
     }
 
+    main h2 {
+        font-size: 20px;
+    }
+}
 
-    public boolean isDisponivel() {
-        return disponivel;
+@media (max-width: 576px) {
+    .sidebar nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-
-    // Setters
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    .sidebar nav ul li a {
+        font-size: 14px;
     }
 
-
-    public void setAno(int ano) {
-        this.ano = ano;
+    main h2 {
+        font-size: 18px;
     }
 
-
-    public void setPrecoDiaria(double precoDiaria) {
-        if (precoDiaria < 0) {
-            System.out.println("Preço da diária deve ser maior que zero.");
-            this.precoDiaria = 0.0;
-        } else {
-            this.precoDiaria = precoDiaria;
-        }
-    }
-
-
-    // Setter para disponivel apenas permite modificar para false
-    public void setDisponivel(boolean disponivel) {
-        if (!disponivel) {
-            this.disponivel = false;
-        }
-    }
-
-
-    // Método para exibir as informações do carro
-    public void exibirInformacoes() {
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Ano: " + ano);
-        System.out.println("Preço da diária: " + precoDiaria);
-        System.out.println("Disponível: " + (disponivel ? "sim" : "não"));
-        System.out.println();
-    }
-
-
-    public static void main(String[] args) {
-        // Criando dois objetos da classe Carro
-        Carro carro1 = new Carro("Toyota Corolla", 2021, 150.00, true);
-        Carro carro2 = new Carro("Honda Civic", 2022, 180.00, false);
-
-
-        // Exibindo informações dos carros
-        System.out.println("Informações dos Carros:");
-        carro1.exibirInformacoes();
-        carro2.exibirInformacoes();
-
-
-        // Modificando o preço da diária e a disponibilidade de um dos carros
-        carro1.setPrecoDiaria(200.00);
-        carro2.setDisponivel(false); // Não é permitido alterar para true fora do construtor
-
-
-        // Exibindo novamente as informações após as modificações
-        System.out.println("Informações dos Carros após Modificações:");
-        carro1.exibirInformacoes();
-        carro2.exibirInformacoes();
+    main p, main ul {
+        font-size: 14px;
     }
 }
